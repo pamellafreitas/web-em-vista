@@ -1,0 +1,4 @@
+- **Tailwind CSS** — utility-first CSS framework used for all layout and styling
+- **Iconify** — icon library used throughout the interface
+- **Unicorn Studio** — used for WebGL background effects
+- **Google Analytics (GA4)** — used for tracking and analytics

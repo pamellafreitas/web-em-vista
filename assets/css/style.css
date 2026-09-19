@@ -1,0 +1,49 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@300;400;500;600;700&display=swap');
+
+/* Base Styles */
+body {
+    background-color: #FAFAFC;
+    color: #2E2A33;
+    font-family: 'Outfit', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Font utilities */
+.font-spartan { font-family: 'League Spartan', sans-serif; }
+.font-glacial { font-family: 'Glacial_Indifference', sans-serif; }
+
+/* Custom Animations */
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+.animate-float {
+    animation: float 4s ease-in-out infinite;
+}
+
+/* Focus and selection styles */
+::selection {
+    background-color: #E6B3FA;
+    color: #2E2A33;
+}
+
+/* Keyboard navigation focus indicator (accessibility) */
+:focus-visible {
+    outline: 2px solid #9B7FC7;
+    outline-offset: 3px;
+    border-radius: 4px;
+}
+
+/* Respect prefers-reduced-motion for Tailwind bounce animations */
+@media (prefers-reduced-motion: reduce) {
+    [class*="animate-[bounce"],
+    .animate-float,
+    .animate-pulse,
+    .animate-spin {
+        animation: none !important;
+    }
+    * {
+        transition-duration: 0.01ms !important;
+    }
+}

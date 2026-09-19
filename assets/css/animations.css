@@ -1,0 +1,232 @@
+
+    @keyframes auraAmbientDriftOne {
+  
+      0%,
+      100% {
+        transform: translate3d(0, 0, 0) scale(1);
+      }
+  
+      35% {
+        transform: translate3d(4vw, 3vh, 0) scale(1.06);
+      }
+  
+      70% {
+        transform: translate3d(-2vw, 5vh, 0) scale(0.98);
+      }
+    }
+  
+    @keyframes auraAmbientDriftTwo {
+  
+      0%,
+      100% {
+        transform: translate3d(0, 0, 0) scale(1);
+      }
+  
+      40% {
+        transform: translate3d(-4vw, -3vh, 0) scale(1.08);
+      }
+  
+      75% {
+        transform: translate3d(3vw, -5vh, 0) scale(0.96);
+      }
+    }
+  
+    @keyframes auraAmbientDriftThree {
+  
+      0%,
+      100% {
+        transform: translate3d(0, 0, 0) scale(1);
+      }
+  
+      50% {
+        transform: translate3d(2vw, -4vh, 0) scale(1.05);
+      }
+    }
+  
+    @keyframes auraDotDrift {
+      0% {
+        background-position: 0 0;
+      }
+  
+      100% {
+        background-position: 4rem 4rem;
+      }
+    }
+  
+    .aura-bg-blob-one {
+      animation: auraAmbientDriftOne 26s ease-in-out infinite;
+    }
+  
+    .aura-bg-blob-two {
+      animation: auraAmbientDriftTwo 32s ease-in-out infinite;
+    }
+  
+    .aura-bg-blob-three {
+      animation: auraAmbientDriftThree 30s ease-in-out infinite;
+    }
+  
+    .aura-bg-dots {
+      animation: auraDotDrift 38s linear infinite;
+    }
+  
+    @media (prefers-reduced-motion: reduce) {
+  
+      .aura-bg-blob-one,
+      .aura-bg-blob-two,
+      .aura-bg-blob-three,
+      .aura-bg-dots {
+        animation: none;
+      }
+    }
+  
+
+      @keyframes aura-float-soft {
+    
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+    
+        50% {
+          transform: translateY(-8px);
+        }
+      }
+    
+      @keyframes aura-bubble-in {
+        0% {
+          opacity: 0;
+          transform: translateX(18px) translateY(8px) scale(0.96);
+          filter: blur(6px);
+        }
+    
+        100% {
+          opacity: 1;
+          transform: translateX(0) translateY(0) scale(1);
+          filter: blur(0);
+        }
+      }
+    
+      @keyframes aura-card-in {
+        0% {
+          opacity: 0;
+          transform: translateY(12px);
+        }
+    
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    
+      .aura-float-bubble {
+        opacity: 0;
+        animation:
+          aura-bubble-in 700ms cubic-bezier(0.22, 1, 0.36, 1) forwards,
+          aura-float-soft 4.5s ease-in-out infinite;
+      }
+    
+      .aura-float-bubble:nth-child(1) {
+        animation-delay: 300ms, 1100ms;
+      }
+    
+      .aura-float-bubble:nth-child(2) {
+        animation-delay: 600ms, 1400ms;
+      }
+    
+      .aura-float-bubble:nth-child(3) {
+        animation-delay: 900ms, 1700ms;
+      }
+    
+      .aura-float-bubble:nth-child(4) {
+        animation-delay: 1200ms, 2000ms;
+      }
+    
+      .aura-hero-card {
+        opacity: 0;
+        animation: aura-card-in 700ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+      }
+    
+      .aura-hero-card:nth-child(1) {
+        animation-delay: 250ms;
+      }
+    
+      .aura-hero-card:nth-child(2) {
+        animation-delay: 450ms;
+      }
+    
+      .aura-hero-card:nth-child(3) {
+        animation-delay: 650ms;
+      }
+    
+      .aura-hero-card:nth-child(4) {
+        animation-delay: 850ms;
+      }
+    
+
+
+    @keyframes auraConnectionFlow {
+
+      0% {
+
+        transform: translateX(-14rem);
+
+        opacity: 0;
+
+      }
+
+      12% {
+
+        opacity: 1;
+
+      }
+
+      88% {
+
+        opacity: 1;
+
+      }
+
+      100% {
+
+        transform: translateX(calc(100vw + 14rem));
+
+        opacity: 0;
+
+      }
+
+    }
+
+  
+
+    @keyframes auraFinalFloatOne {
+
+      0%,
+      100% {
+        transform: translateY(0) rotate(-5deg);
+      }
+
+      50% {
+        transform: translateY(-10px) rotate(-3deg);
+      }
+    }
+
+    @keyframes auraFinalFloatTwo {
+
+      0%,
+      100% {
+        transform: translateY(0) rotate(5deg);
+      }
+
+      50% {
+        transform: translateY(10px) rotate(3deg);
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      .animate-\[auraFinalFloatOne_5\.5s_ease-in-out_infinite\],
+      .animate-\[auraFinalFloatTwo_6\.25s_ease-in-out_infinite\] {
+        animation: none;
+      }
+    }
+  
